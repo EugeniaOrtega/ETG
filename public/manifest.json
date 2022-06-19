@@ -1,0 +1,36 @@
+{
+  "background_color": "#ffffff",
+  "categories":["business"],
+  "description": "TFG de carrera universitaria.",
+  "dir": "ltr",
+  "display_override": ["standalone","fullscreen"],
+  "display":"standalone",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "ID": "/v1",
+  "lang": "es-ES",
+  "name": "TFG EUGENIA",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "short_name": "TFG EUGENIA",
+  "start_url": "/",
+  "theme_color": "orange"
+
+  
+
+
+      
+
+
+}
