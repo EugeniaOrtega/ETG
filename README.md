@@ -73,4 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Live Demo
 
-[Link to the live demo](https://62af720bade8737f8d79de62--benevolent-toffee-7485af.netlify.app/)
+[Link to the live demo](https://benevolent-toffee-7485af.netlify.app/)
