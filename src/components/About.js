@@ -8,7 +8,7 @@ export function About() {
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
       <Home />{" "}
-      <div className="py-12 bg-blue-200 w-full max-w-screen-lg mt-5 ml-60 ">
+      <div className="py-12 bg-blue-200 w-full max-w-screen-lg mt-5 mx-auto ">
         <Fade bottom>
           <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="lg:text-center">
@@ -20,7 +20,7 @@ export function About() {
             <div className="mt-10">
               <div className="md:grid md:grid-cols-2">
                 <Fade left>
-                  <div className="w-[500px] flex flex-col items-start">
+                  <div className="w-full flex flex-col items-start">
                     <p className=" font-light text-black font-semibold text-left text-2xl">
                       ACERCA ETG S.L
                     </p>
