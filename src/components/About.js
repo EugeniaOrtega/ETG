@@ -8,7 +8,7 @@ export function About() {
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
       <Home />{" "}
-      <div className="py-12 bg-blue-200 w-full max-w-screen-lg mt-5 mx-auto ">
+      <div className="py-12 bg-blue-200 w-full max-w-screen-lg mt-10 mx-auto ">
         <Fade bottom>
           <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="lg:text-center">
