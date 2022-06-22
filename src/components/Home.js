@@ -176,7 +176,7 @@ export function Home() {
                   </div>
                 </div>
 
-                <div className="order-2 md:order-3 col-span-full md:col-span-1 py-1 md:py-10 px-6 mb-8 ">
+                <div className="order-2 md:order-3 col-span-full md:col-span-1 py-1 md:py-10 px-6 mb-8 mt-6">
                   <div class="flex my-1 text-black mx-4 mx-auto">
                     {isReadyForInstall && (
                       <a
