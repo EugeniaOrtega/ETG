@@ -7,7 +7,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Fade } from "react-reveal";
 export function EditProfile() {
   const { user } = useAuth();
-  console.log(user);
+  //console.log(user);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [image, setImage] = useState();
@@ -17,7 +17,7 @@ export function EditProfile() {
       setImage(e.target.files[0]);
     }
   };
-  console.log(image);
+  //console.log(image);
 
   const handleSubmit = (e) => {
     const imageRef = ref(storage, "image");
@@ -63,23 +63,23 @@ export function EditProfile() {
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
       <Home />{" "}
-      <div class="max-w-sm pb-5 mx-auto mt-4 overflow-hidden rounded-lg shadow-lg fondo">
+      <div className="max-w-sm pb-5 mx-auto mt-4 overflow-hidden rounded-lg shadow-lg fondo">
         <Fade top>
-          <div class="h-40 bg-gradient-to-br from-blue-400 via-indigo-500 fondo">
-            <div class="flex justify-center">
-              <span class="mt-10 text-xl font-extrabold text-white">
+          <div className="h-40 bg-gradient-to-br from-blue-400 via-indigo-500 fondo">
+            <div className="flex justify-center">
+              <span className="mt-10 text-xl font-extrabold text-white">
                 {user.displayName || user.email}
               </span>
             </div>
-            <div class="w-full p-8 mx-2 flex justify-center">
+            <div className="w-full p-8 mx-2 flex justify-center">
               <img
                 src={user.photoURL}
-                class="rounded-full w-32"
+                className="rounded-full w-32"
                 alt="Avatar"
                 onClick={handleImageChange}
               />
             </div>
-            <div class="w-full  mx-2 flex justify-center">
+            <div className="w-full  mx-2 flex justify-center">
               <input
                 type="file"
                 id="customFile"
@@ -92,20 +92,20 @@ export function EditProfile() {
             </div>
           </div>
           <Fade left>
-            <div class="px-6 py-4">
-              <div class="flex justify-center mt-10 mb-4 text-xl font-medium">
+            <div className="px-6 py-4">
+              <div className="flex justify-center mt-10 mb-4 text-xl font-medium">
                 Datos personales
               </div>
-              <div class="flex my-1 ml-10 text-black mr-10">
+              <div className="flex my-1 ml-10 text-black mr-10">
                 <img
-                  class="object-cover w-8 h-8 mt-4 border-4 border-blue-600 rounded-full"
+                  className="object-cover w-8 h-8 mt-4 border-4 border-blue-600 rounded-full"
                   src="account.png"
                   alt=""
                 />
                 <span className="mx-5 py-4">
                   <input
                     id="username"
-                    class="border-1  rounded-r px-4 py-2 w-full"
+                    className="border-1  rounded-r px-4 py-2 w-full"
                     type="text"
                     placeholder="Introduce el nombre nuevo"
                     value={name}
@@ -114,16 +114,16 @@ export function EditProfile() {
                 </span>
               </div>
 
-              <div class="flex my-1 ml-10 text-black mr-10">
+              <div className="flex my-1 ml-10 text-black mr-10">
                 <img
-                  class="object-cover w-8 h-8 mt-4 border-4 border-blue-600 rounded-full"
+                  className="object-cover w-8 h-8 mt-4 border-4 border-blue-600 rounded-full"
                   src="email.png"
                   alt=""
                 />
                 <span className="mx-5 py-4">
                   <input
                     id="email"
-                    class="border-1  rounded-r px-4 py-2 w-full"
+                    className="border-1  rounded-r px-4 py-2 w-full"
                     type="email"
                     placeholder="Introduce el email nuevo"
                     value={email}
@@ -132,10 +132,10 @@ export function EditProfile() {
                 </span>
               </div>
 
-              <div class="flex my-1 mt-2 ml-32 ">
+              <div className="flex my-1 mt-2 ml-32 ">
                 <button
                   type="button"
-                  class="inline-flex items-center px-6 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700"
+                  className="inline-flex items-center px-6 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700"
                   onClick={updateProfile && handleSubmit}
                 >
                   Actualizar

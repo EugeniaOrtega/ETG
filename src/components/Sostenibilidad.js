@@ -1,13 +1,15 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { Home } from "./Home";
-import { useAuth } from "../context/authContext";
+
 import {
   UsersIcon,
   PencilAltIcon,
   UserGroupIcon,
   CurrencyEuroIcon,
 } from "@heroicons/react/outline";
+import { NavBar } from "./NavBar";
+import { useAuth } from "../context/authContext";
+import { Home } from "./Home";
 
 export function Sostenibilidad() {
   const { user } = useAuth();
@@ -40,7 +42,7 @@ export function Sostenibilidad() {
   ];
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
-      <Home />{" "}
+      {user ? <Home /> : <NavBar />}
       <div className="py-12 bg-blue-200 w-full max-w-screen-xl mt-10 mx-auto">
         <Fade top>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">

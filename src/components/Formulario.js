@@ -1,15 +1,17 @@
-import { Home } from "./Home";
-import { useAuth } from "../context/authContext";
 import { MailIcon } from "@heroicons/react/outline";
 import emailjs from "emailjs-com";
 import { Fade } from "react-reveal";
+import { useAuth } from "../context/authContext";
+import { Home } from "./Home";
+import { NavBar } from "./NavBar";
 
 export function Formulario({ setAlertContent, setShowAlert }) {
+  const { user } = useAuth();
+  //console.log(user);
   const REACT_APP_EMAILJS_SERVICE_ID = "service_8szdt6h";
   const REACT_APP_EMAILJS_TEMPLATE_ID = "template_ohi70d3";
   const REACT_APP_EMAILJS_USER_ID = "RDmcnsefOrJLCvOsG";
-  const { user } = useAuth();
-  console.log(user);
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -35,7 +37,7 @@ export function Formulario({ setAlertContent, setShowAlert }) {
 
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
-      <Home />{" "}
+      {user ? <Home /> : <NavBar />}
       <div className="py-12 bg-blue-200 w-full max-w-screen-xl mt-10 mx-auto">
         <Fade top>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -176,7 +178,11 @@ export function Formulario({ setAlertContent, setShowAlert }) {
                           style={{ backgroundColor: "#4267B2" }}
                         >
                           {/* ::facebook svg */}
-                          <img class=" w-8 h-8 " src="linkedin.png" alt="" />
+                          <img
+                            className=" w-8 h-8 "
+                            src="linkedin.png"
+                            alt=""
+                          />
                         </a>
                       </div>
                     </div>

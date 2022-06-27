@@ -7,12 +7,8 @@ const navigation = [
   { name: "Sobre nosotros", href: "/about", current: false },
   { name: "Contacto", href: "/contact", current: false },
   { name: "Sostenibilidad", href: "/sustainability", current: false },
-  {
-    name: "Preguntas frecuentes",
-    href: "/questions",
-
-    current: false,
-  },
+  { name: "Preguntas frecuentes", href: "/questions", current: false },
+  { name: "Empleados", href: "/employe", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,7 +16,7 @@ function classNames(...classes) {
 }
 export function Home() {
   const { user, logout, loading } = useAuth();
-  console.log(user);
+  //console.log(user);
   const handleLogout = async () => {
     try {
       await logout();
@@ -177,7 +173,7 @@ export function Home() {
                 </div>
 
                 <div className="order-2 md:order-3 col-span-full md:col-span-1 py-1 md:py-10 px-6 mb-5 mt-6 mr-15">
-                  <div class="flex my-1 text-black mx-4 mx-auto ">
+                  <div className="flex my-1 text-black mx-4 mx-auto ">
                     {isReadyForInstall && (
                       <a
                         className="mx-2 ml-3 my-4 mt-5 "
@@ -185,7 +181,7 @@ export function Home() {
                         onClick={installPwa}
                       >
                         <img
-                          class="object-cover w-10 h-10 mt-4 border-4 border-blue-600 rounded-full inline-block my-4 mr-2 "
+                          className="object-cover w-10 h-10 mt-4 border-4 border-blue-600 rounded-full inline-block my-4 mr-2 "
                           src="smartphone.png"
                           alt=""
                         />

@@ -4,10 +4,14 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 const navigation = [
   { name: "Login", href: "/login", current: false },
   { name: "Registro", href: "/registro", current: false },
+  { name: "Sobre nosotros", href: "/about", current: false },
+  { name: "Contacto", href: "/contact", current: false },
+  { name: "Preguntas frecuentes", href: "/questions", current: false },
+  { name: "Sostenibilidad", href: "/sustainability", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+function classNames(...classNamees) {
+  return classNamees.filter(Boolean).join(" ");
 }
 export function NavBar() {
   return (

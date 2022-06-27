@@ -1,13 +1,15 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { Home } from "./Home";
 import { useAuth } from "../context/authContext";
+import { NavBar } from "./NavBar";
+import { Home } from "./Home";
 export function About() {
   const { user } = useAuth();
   console.log(user);
   return (
     <div className="w-full bg-[url('/public/vessel.png')]">
-      <Home />{" "}
+      {user ? <Home /> : <NavBar />}
+
       <div className="py-12 bg-blue-200 w-full max-w-screen-lg mt-10 mx-auto ">
         <Fade bottom>
           <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">

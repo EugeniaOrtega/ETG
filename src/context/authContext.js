@@ -1,3 +1,4 @@
+//importaciones de funciones y librerias
 import { createContext, useContext, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
