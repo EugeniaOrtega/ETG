@@ -1,6 +1,6 @@
 import React from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
-import { Carta } from "./CartaEmpleados";
+
 import { Home } from "./Home";
 import { AñadirEmpleado } from "./CrearEmpleado";
 import { PencilAltIcon, TrashIcon } from "@heroicons/react/outline";
