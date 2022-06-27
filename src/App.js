@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
-import Employe from "./components/Empleados/Employe";
 import { Login } from "./components/Login";
 import { ProtectedRoute } from "./components/ProtectedRoutes";
 import { Registro } from "./components/Registro";
