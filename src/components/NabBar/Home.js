@@ -1,4 +1,4 @@
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../../context/authContext";
 import { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";

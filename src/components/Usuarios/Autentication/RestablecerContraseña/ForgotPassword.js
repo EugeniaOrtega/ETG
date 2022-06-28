@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useAuth } from "../context/authContext";
-import { NavBar } from "./NavBar";
-
-import { Alert } from "./Alert";
+import { useAuth } from "../../../../context/authContext";
+import { NavBar } from "../../../NabBar/NavBar";
+import { Alert } from "../../../Utils/Alert";
 import { Fade } from "react-reveal";
 export function ResetPassword() {
   const [user, setUser] = useState({

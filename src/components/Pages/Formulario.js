@@ -1,9 +1,9 @@
 import { MailIcon } from "@heroicons/react/outline";
 import emailjs from "emailjs-com";
 import { Fade } from "react-reveal";
-import { useAuth } from "../context/authContext";
-import { Home } from "./Home";
-import { NavBar } from "./NavBar";
+import { useAuth } from "../../context/authContext";
+import { Home } from "../NabBar/Home";
+import { NavBar } from "../NabBar/NavBar";
 
 export function Formulario({ setAlertContent, setShowAlert }) {
   const { user } = useAuth();

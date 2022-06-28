@@ -1,13 +1,13 @@
+import { PencilAltIcon, TrashIcon } from "@heroicons/react/outline";
 import { onValue, ref, remove, set, update } from "firebase/database";
 import { useEffect, useState } from "react";
-import { db } from "../config/firebase.config";
+import { db } from "../../config/firebase.config";
+import { EditEmployeModal } from "../Modals/Empleados/EditarEmpleadoModal";
+import { DeleteEmployeModal } from "../Modals/Empleados/EliminarEmpleadoModal";
+import { AddEmployeModal } from "../Modals/Empleados/CrearEmpleadoModal";
 import { uid } from "uid";
-import { PencilAltIcon, TrashIcon } from "@heroicons/react/outline";
 
-import { AddEmployeModal } from "./Modals/Empleados/CrearEmpleadoModal";
-import { EditEmployeModal } from "./Modals/Empleados/EditarEmpleadoModal";
-import { DeleteEmployeModal } from "./Modals/Empleados/EliminarEmpleadoModal";
-export function Prueba() {
+export function Empleado() {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [cargo, setCargo] = useState("");

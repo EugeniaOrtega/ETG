@@ -1,8 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { useAuth } from "../context/authContext";
-import { NavBar } from "./NavBar";
-import { Home } from "./Home";
+import { useAuth } from "../../context/authContext";
+import { NavBar } from "../NabBar/NavBar";
+import { Home } from "../NabBar/Home";
 export function About() {
   const { user } = useAuth();
   console.log(user);

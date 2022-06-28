@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./components/Home";
-import { Login } from "./components/Login";
-import { ProtectedRoute } from "./components/ProtectedRoutes";
-import { Registro } from "./components/Registro";
+import { Home } from "./components/NabBar/Home";
+import { Login } from "./components/Usuarios/Autentication/Login/Login";
+import { ProtectedRoute } from "./components/Utils/ProtectedRoutes";
+import { Registro } from "./components/Usuarios/Autentication/Registro/Registro";
 import { AuthProvider } from "./context/authContext";
-import { ResetPassword } from "./components/ForgotPassword";
-import { Formulario } from "./components/Formulario";
-import { Sostenibilidad } from "./components/Sostenibilidad";
-import { About } from "./components/About";
-import { Profile } from "./components/Profile";
-import { EditProfile } from "./components/EditProfile";
-import { Questions } from "./components/PreguntasFrecuentes";
-import { Inicio } from "./components/Inicio";
-import { Empleado } from "./components/Empleado";
+import { ResetPassword } from "./components/Usuarios/Autentication/RestablecerContraseña/ForgotPassword";
+import { Formulario } from "./components/Pages/Formulario";
+import { Sostenibilidad } from "./components/Pages/Sostenibilidad";
+import { About } from "./components/Pages/About";
+import { Profile } from "./components/Usuarios/Profile/Profile";
+import { EditProfile } from "./components/Usuarios/Profile/EditProfile";
+import { Questions } from "./components/Pages/PreguntasFrecuentes";
+import { Inicio } from "./components/Pages/Inicio";
+import { Empleado } from "./components/Empleados/Empleado";
+import { Prueba } from "./components/pruebas";
+import { Modal } from "./components/modalPrueba";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
           />{" "}
           <Route path="/questions" element={<Questions />} />{" "}
           <Route path="/inicio" element={<Inicio />} />{" "}
+          <Route path="/prueba" element={<Prueba />} />{" "}
+          <Route path="/modal" element={<Modal />} />
         </Routes>{" "}
       </AuthProvider>{" "}
     </div>
